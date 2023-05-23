@@ -12,8 +12,8 @@
 
 namespace ariel{
     class Team{
-        private:
-            vector<Character*> _champions;
+        protected:
+            std::vector<Character*> _champions;
             Character* _team_leader;
             int _champions_count;
 
@@ -26,6 +26,16 @@ namespace ariel{
             virtual void attack(Team*);
             int stillAlive() const;
             virtual void print() const;
+            Character* ClosestCharacter(Team* team);
+            void setLeader();
+            
+            void champDied(){
+                _champions_count -=1;
+            }
+
+            std::vector<Character*> getChampions(){
+                return _champions;
+            }
 
     };
 }

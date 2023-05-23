@@ -35,8 +35,8 @@ namespace ariel{
         if(isAlive()){
             return  "Name: " + _name + 
             "\nHP: " + std::to_string(_hp) + 
-            "\nPoint: " + _location.print() + "\n";
+            "\nPoint: " + _location.print();
         }
-        return "C(" + _name + ")\n";
+        return "C(" + _name + ")";
     }
 }

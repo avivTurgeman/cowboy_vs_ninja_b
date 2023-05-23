@@ -17,10 +17,10 @@ namespace ariel{
             throw std::runtime_error("no self harm");
         }
         
-        if(this->isAlive() && (this->distance(other) < 1)){
+        if(isAlive() && (this->distance(other) < 1)){
             other->hit(40);
         }
-        else if(!(this->isAlive())){
+        else if(!(isAlive())){
             throw std::runtime_error("this Ninja is dead");
         }
     }
@@ -30,8 +30,8 @@ namespace ariel{
         if(isAlive()){
             return  "Name: " + _name + 
             "\nHP: " + std::to_string(_hp) + 
-            "\nPoint: " + _location.print() + "\n";
+            "\nPoint: " + _location.print();
         }
-        return "N(" + _name + ")\n";
+        return "N(" + _name + ")";
     }
 }

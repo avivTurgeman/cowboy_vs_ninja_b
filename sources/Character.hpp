@@ -23,7 +23,7 @@ namespace ariel{
             Character& operator = (const Character&); 
             // Move Assignment operator
             Character& operator = (Character&&) noexcept; 
-
+ 
             virtual ~Character() = default;
 
             bool isAlive();

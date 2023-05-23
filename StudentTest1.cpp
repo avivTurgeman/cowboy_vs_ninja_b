@@ -29,7 +29,7 @@ auto create_yninja = [](double x = random_float(), double y = random_float()) {
 auto create_tninja = [](double x = random_float(), double y = random_float()) {
     return new TrainedNinja{"Bob", Point{x, y}};
 };
-
+ 
 auto create_oninja = [](double x = random_float(), double y = random_float()) {
     return new OldNinja{"Bob", Point{x, y}};
 };

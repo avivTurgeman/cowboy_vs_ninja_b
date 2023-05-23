@@ -5,7 +5,7 @@
 
 namespace ariel{
     class SmartTeam : public Team{
-
+ 
         public:
             //constructor
             SmartTeam(Character*);

@@ -92,7 +92,7 @@ namespace ariel{
                     if(Nattacker->distance(victim) < 1){
                         // cout << champ->getName() << " is slashing " << victim->getName() << endl;
                         Nattacker->slash(victim);
-                    }
+                    } 
                     else{
                         // cout << champ->getName() << " is moving\n";
                         Nattacker->move(victim);

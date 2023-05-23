@@ -6,7 +6,7 @@
 
 namespace ariel{
     class Cowboy : public Character{
-        private:
+        private: 
             int _balls_amount;
 
         public:

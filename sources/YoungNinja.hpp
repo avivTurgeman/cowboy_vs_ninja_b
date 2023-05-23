@@ -10,6 +10,6 @@ namespace ariel{
             //constructor
             YoungNinja(std::string name, const Point& location);
     };
-}
+} 
 
 #endif

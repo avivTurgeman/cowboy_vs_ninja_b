@@ -36,7 +36,7 @@ namespace ariel{
             return  "Name: " + _name + 
             "\nHP: " + std::to_string(_hp) + 
             "\nPoint: " + _location.print();
-        }
+        } 
         return "C(" + _name + ")";
     }
 }

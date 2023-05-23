@@ -7,7 +7,7 @@ namespace ariel{
     Character::Character(string name, const Point& location, int hp):
     _name(name), _location(location), _hp(hp){
         _team_player = false;
-    }
+    } 
 
     bool Character::isAlive(){
         if(_hp > 0){

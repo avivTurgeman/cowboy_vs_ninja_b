@@ -31,7 +31,7 @@ namespace ariel{
             
             void champDied(){
                 _champions_count -=1;
-            }
+            } 
 
             std::vector<Character*> getChampions(){
                 return _champions;

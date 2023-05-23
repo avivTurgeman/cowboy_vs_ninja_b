@@ -9,7 +9,7 @@ namespace ariel{
     void SmartTeam::attack(Team *){
         return;
     }
-
+ 
     void SmartTeam::print() const{
         return;
     }

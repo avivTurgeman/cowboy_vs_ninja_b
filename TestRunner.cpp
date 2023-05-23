@@ -8,7 +8,7 @@ const int MIN_TESTS = 20;
 struct ReporterGrader: public ConsoleReporter {
     ReporterGrader(const ContextOptions& input_options)
             : ConsoleReporter(input_options) {}
-
+ 
     void test_run_end(const TestRunStats& run_stats) override {
         ConsoleReporter::test_run_end(run_stats);
         int numAsserts = run_stats.numAsserts >=  MIN_TESTS? run_stats.numAsserts:  MIN_TESTS;

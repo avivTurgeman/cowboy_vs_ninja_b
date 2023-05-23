@@ -15,6 +15,6 @@ namespace ariel{
             void print() const override;
 
     };
-}
+} 
 
 #endif

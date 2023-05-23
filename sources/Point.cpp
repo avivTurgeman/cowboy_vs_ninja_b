@@ -23,7 +23,7 @@ namespace ariel{
     Point Point::moveTowards(Point src, Point dest, double dist){
         if(dist < 0){
             throw std::invalid_argument("distance must be a non-negative");
-        }
+        } 
         double srcToDestDist = src.distance(dest);
         if(srcToDestDist <= dist){
             return dest;

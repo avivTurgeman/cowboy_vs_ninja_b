@@ -24,7 +24,7 @@ namespace ariel{
             throw std::runtime_error("this Ninja is dead");
         }
     }
-
+ 
     string Ninja::print(){
         string rv;
         if(isAlive()){

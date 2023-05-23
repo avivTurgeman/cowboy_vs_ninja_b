@@ -9,7 +9,7 @@
 // Distributed under the MIT Software License
 // See accompanying file LICENSE.txt or copy at
 // https://opensource.org/licenses/MIT
-//
+// 
 // The documentation can be found at the library's page:
 // https://github.com/doctest/doctest/blob/master/doc/markdown/readme.md
 //

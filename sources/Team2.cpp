@@ -48,7 +48,7 @@ namespace ariel{
                         Cattacker->reload();
                     }
                 }   
-            }
+            } 
             else{
                 // cout << "-------------------------------------------\n";
                 // cout << victim->print();

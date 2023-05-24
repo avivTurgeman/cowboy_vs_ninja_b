@@ -13,6 +13,7 @@ namespace ariel{
             //Team2 methods
             void attack(Team*) override;
             void print() const override;
+            Character* farthestCharacter(Team* team) const;
 
     };
 }

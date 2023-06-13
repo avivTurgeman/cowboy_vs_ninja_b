@@ -10,7 +10,7 @@ namespace ariel{
             int _balls_amount;
 
         public:
-            //constractor
+            //constructor
             Cowboy(std::string,const Point&);
             
 

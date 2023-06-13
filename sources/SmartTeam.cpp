@@ -32,12 +32,10 @@ namespace ariel{
         //Cowboys attack
         for(Character *champ : _champions){
             if(typeid(Cowboy) == typeid(*champ)){
-                // cout << "-------------------------------------------\n";
-                // cout << victim->print();
-                // cout << "-------------------------------------------\n\n";
+
                 Cowboy *Cattacker = dynamic_cast<Cowboy*>(champ);
                 
-                victim = farthestCharacter(enemy);
+                victim = farthestCharacter(Cattacker, enemy);
                 
                 if(victim == nullptr){
                     break;
@@ -45,21 +43,16 @@ namespace ariel{
                 
                 if(Cattacker->isAlive()){
                     if(Cattacker->hasboolets()){
-                        // cout << champ->getName() << " is shooting " << victim->getName() << endl;
                         Cattacker->shoot(victim);
                     }
                     else{
-                        // cout << champ->getName() << " is reloading\n";
                         Cattacker->reload();
                     }
                 }   
             } 
             else{
-                // cout << "-------------------------------------------\n";
-                // cout << victim->print();
-                // cout << "-------------------------------------------\n\n";
                 Ninja *Nattacker = dynamic_cast<Ninja*>(champ);
-                victim = ClosestCharacter(enemy);
+                victim = ClosestCharacterToNinja(Nattacker, enemy);
                 
                 if(victim == nullptr){
                     break;
@@ -94,23 +87,42 @@ namespace ariel{
         }
     }
 
-    Character* SmartTeam::farthestCharacter(Team* team) const{
+    Character* SmartTeam::farthestCharacter(Cowboy *Cattacker, Team* team) const{
         bool first_champ = true;
         Character *farthest = nullptr;
         vector<Character*> champions = team->getChampions();
 
         for(Character* champ : champions){
-            if((champ != _team_leader) && (champ->isAlive())){
+            if(champ->isAlive()){
                 if(first_champ){
                     farthest = champ;
                     first_champ = false;
                 }
-                else if(_team_leader->distance(champ) > _team_leader->distance(farthest)){
+                else if(Cattacker->distance(champ) > Cattacker->distance(farthest)){
                     farthest = champ;
                 }
             }
         }
         return farthest;
+    }
+
+    Character* SmartTeam::ClosestCharacterToNinja(Ninja *Nattacker, Team *enemy){
+        bool first_champ = true;
+        Character *closest = nullptr;
+        vector<Character*> champions = enemy->getChampions();
+
+        for(Character* champ : champions){
+            if(champ->isAlive()){
+                if(first_champ){
+                    closest = champ;
+                    first_champ = false;
+                }
+                else if(Nattacker->distance(champ) < Nattacker->distance(closest)){
+                    closest = champ;
+                }
+            }
+        }
+        return closest;
     }
 
 }

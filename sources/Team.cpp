@@ -158,13 +158,13 @@ namespace ariel{
         _team_leader = nextLeader;
     }
 
-    Character* Team::ClosestCharacter(Team* team){
+    Character* Team::ClosestCharacter(Team* enemy){
         bool first_champ = true;
         Character *closest = nullptr;
-        vector<Character*> champions = team->getChampions();
+        vector<Character*> champions = enemy->getChampions();
 
         for(Character* champ : champions){
-            if((champ != _team_leader) && (champ->isAlive())){
+            if(champ->isAlive()){
                 if(first_champ){
                     closest = champ;
                     first_champ = false;
